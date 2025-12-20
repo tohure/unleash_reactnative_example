@@ -23,9 +23,9 @@ Para el funcionamiento de Unleash y la gestión del entorno, se han instalado la
 Asegúrate de tener un archivo `.env` en la raíz del proyecto con el siguiente formato:
 
 ```env
-UNLEASH_URL=tu_url_de_unleash
-UNLEASH_CLIENT_KEY=tu_client_key
-UNLEASH_APP_NAME=nombre_de_tu_app
+UNLEASH_URL=URL_FRONTEND_UNLEASH
+UNLEASH_CLIENT_KEY=UNLEASH_CLIENT_KEY
+UNLEASH_APP_NAME=YOUR_APP_NAME
 ```
 
 ### 2. Instalación
