@@ -33,7 +33,6 @@ lib-cov/
 
 # Environment
 .env
-.env.*
 !.env.example
 
 # Build & Cache
