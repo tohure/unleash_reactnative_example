@@ -70,6 +70,7 @@ android/build/
 android/app/build/
 android/app/.idea/
 android/app/src/debug/
+android/app/.cxx/
 android/local.properties
 android/*.keystore
 !android/debug.keystore
