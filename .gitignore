@@ -1,0 +1,91 @@
+# General
+*.log
+logs
+*.bak
+*.swp
+.DS_Store
+
+# Dependencies
+node_modules/
+.npm/
+# Yarn
+.pnp
+.pnp.js
+.yarn-integrity
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+lib-cov/
+*.lcov
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Build & Cache
+dist/
+build/
+out/
+.cache/
+.temp/
+.eslintcache
+.stylelintcache
+.node_repl_history
+
+# Frameworks - Web (Next, Nuxt, Gatsby, etc)
+.next/
+.nuxt/
+.vuepress/dist
+.serverless/
+.firebase/
+.docusaurus/
+.svelte-kit/
+
+# React Native
+.expo/
+web-build/
+*.bundle
+*.jsbundle
+.rncache/
+metro-cache/
+
+# Android
+android/.gradle
+android/build/
+android/app/build/
+android/app/.idea/
+android/app/src/debug/
+android/local.properties
+android/*.keystore
+!android/debug.keystore
+
+# iOS
+ios/build/
+ios/Pods/
+ios/*.xcworkspace
+ios/*.xcuserdata
+ios/*.xcodeproj/project.xcworkspace
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/xcshareddata/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.vscode-test/
