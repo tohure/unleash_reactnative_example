@@ -1,0 +1,10 @@
+[
+  {
+    "name": "button_status",
+    "enabled": true
+  },
+  {
+    "name": "killing-flag",
+    "enabled": true
+  }
+]
