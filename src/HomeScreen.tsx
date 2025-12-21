@@ -8,6 +8,8 @@ export const HomeScreen = () => {
 	const navigation = useNavigation<NavigationProp<RootStackParams>>();
 
 	const isFFKilling = !useFlag("button_status");
+	const rollOutFlag = useFlag("roll_out_flag");
+	const attribute_eval = useFlag("attribute_eval");
 
 	return (
 		<View style={styles.container}>
@@ -16,14 +18,14 @@ export const HomeScreen = () => {
 				mode="contained"
 				onPress={() => console.log("Pressed")}
 			>
-				Press me
+				Segmentación Attr -- {attribute_eval ? "elegido" : "no elegido"}
 			</Button>
 			<Button
-				icon="camera"
+				icon="percent"
 				mode="contained"
 				onPress={() => console.log("Pressed")}
 			>
-				Press me
+				Roll out {rollOutFlag ? "elegido" : "no elegido"}
 			</Button>
 			<Button
 				disabled={isFFKilling}
