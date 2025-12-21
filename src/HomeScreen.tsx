@@ -1,5 +1,5 @@
 import { NavigationProp, useNavigation } from "@react-navigation/native";
-import { useFlag } from "@unleash/proxy-client-react";
+import { useFlag, useUnleashClient } from "@unleash/proxy-client-react";
 import { StyleSheet, View } from "react-native";
 import { Button } from "react-native-paper";
 import { RootStackParams } from "./Navigation";
@@ -10,15 +10,19 @@ export const HomeScreen = () => {
 	const isFFKilling = !useFlag("button_status");
 	const rollOutFlag = useFlag("roll_out_flag");
 	const attribute_eval = useFlag("attribute_eval");
+	const client = useUnleashClient();
 
 	return (
 		<View style={styles.container}>
 			<Button
-				icon="camera"
+				icon="access-point"
 				mode="contained"
-				onPress={() => console.log("Pressed")}
+				onPress={() => {
+					client.setContextField("appVersion", "1.0.2");
+					console.log("Pressed");
+				}}
 			>
-				Segmentación Attr -- {attribute_eval ? "elegido" : "no elegido"}
+				Segmentación Attr by app version -- {attribute_eval ? "✅" : "⚠️"}
 			</Button>
 			<Button
 				icon="percent"
