@@ -1,10 +1,22 @@
 [
-  {
-    "name": "button_status",
-    "enabled": true
-  },
-  {
-    "name": "killing-flag",
-    "enabled": true
-  }
+	{
+		"name": "button_status",
+		"enabled": true
+	},
+	{
+		"name": "killing-flag",
+		"enabled": true
+	},
+	{
+		"name": "remoteconfig_flag",
+		"enabled": true,
+		"variant": {
+			"name": "bannerText",
+			"enabled": true,
+			"payload": {
+				"type": "json",
+				"value": "{\"text\": \"waiting\", \"emoji\": \"🕰️\"}"
+			}
+		}
+	}
 ]

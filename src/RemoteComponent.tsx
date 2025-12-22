@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { useVariant } from "@unleash/proxy-client-react";
 import { Button } from "react-native-paper";
 
@@ -18,11 +18,10 @@ const RemoteComponent = () => {
 				console.error("Error parsing Unleash payload", error);
 			}
 		}
-		return null;
 	}, [enabled, name, payload]);
 
-	const text = banner?.text || "waiting";
-	const emoji = banner?.emoji || "🕰️";
+	const text = banner.text;
+	const emoji = banner.emoji;
 
 	return (
 		<Button
