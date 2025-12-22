@@ -1,0 +1,44 @@
+graph TD
+    subgraph "Unleash Server (Cloud/Self-Hosted)"
+        US[Unleash Dashboard]
+        UP[Unleash Proxy / Edge]
+    end
+
+    subgraph "React Native App (Client Device)"
+        
+        subgraph "Unleash Layer"
+            UC[unleashConfig.ts]
+            DF[defaultFlags.json - Bootstrap]
+            UW[UnleashWrapper.tsx - FlagProvider]
+        end
+
+        subgraph "Storage & Networking"
+            AS[(AsyncStorage)]
+            NET[HTTP / Fetch]
+        end
+
+        subgraph "UI Components"
+            HS[HomeScreen.tsx]
+            RC[RemoteComponent.tsx]
+            EC[ExperimentComponent.tsx]
+        end
+    end
+
+    %% Flujos de Configuración
+    US -- "Manage Flags & Strategies" --> UP
+    UC -- "API Token & URL" --> UW
+    DF -- "Initial State" --> UW
+    
+    %% Flujos de Datos
+    UW -- "1. Use Bootstrap" --> HS
+    UW -- "2. Sync Cache" --> AS
+    AS -- "Load Cache" --> UW
+    
+    %% Flujo de Red
+    NET <== "3. Fetch Toggles (Context)" ==> UP
+    NET -- "Update State" --> UW
+
+    %% Interacción Componentes
+    UW -- "useFlag / useVariant" --> RC
+    UW -- "useVariant (A/B Test)" --> EC
+    HS -- "setContextField (Refetch)" --> NET
