@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useVariant } from "@unleash/proxy-client-react";
-import { Button, Text } from "react-native-paper";
+import { Button } from "react-native-paper";
 
 interface ExperimentPayload {
 	buttonText: string;

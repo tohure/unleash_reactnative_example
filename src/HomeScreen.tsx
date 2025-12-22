@@ -1,9 +1,5 @@
 import { NavigationProp, useNavigation } from "@react-navigation/native";
-import {
-	useFlag,
-	useUnleashClient,
-	useVariant,
-} from "@unleash/proxy-client-react";
+import { useFlag, useUnleashClient } from "@unleash/proxy-client-react";
 import { StyleSheet, View } from "react-native";
 import { Button } from "react-native-paper";
 import { RootStackParams } from "./Navigation";
