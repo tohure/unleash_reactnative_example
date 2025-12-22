@@ -8,6 +8,7 @@ import { StyleSheet, View } from "react-native";
 import { Button } from "react-native-paper";
 import { RootStackParams } from "./Navigation";
 import RemoteComponent from "./RemoteComponent";
+import ExperimentComponent from "./ExperimentComponent";
 
 export const HomeScreen = () => {
 	const navigation = useNavigation<NavigationProp<RootStackParams>>();
@@ -19,6 +20,7 @@ export const HomeScreen = () => {
 
 	return (
 		<View style={styles.container}>
+			<ExperimentComponent />
 			<RemoteComponent />
 			<Button
 				icon="access-point"
