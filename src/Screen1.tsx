@@ -1,7 +1,8 @@
 import { useCallback } from "react";
 import { useFocusEffect } from "@react-navigation/native";
 import { useUnleashClient, useFlag } from "@unleash/proxy-client-react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { Text } from "react-native-paper";
 
 export const Screen1Screen = () => {
 	const client = useUnleashClient();

@@ -20,8 +20,8 @@ const RemoteComponent = () => {
 		}
 	}, [enabled, name, payload]);
 
-	const text = banner.text;
-	const emoji = banner.emoji;
+	const text = banner?.text ?? "";
+	const emoji = banner?.emoji ?? "";
 
 	return (
 		<Button
